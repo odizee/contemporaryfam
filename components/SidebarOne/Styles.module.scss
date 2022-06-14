@@ -1,0 +1,191 @@
+.sidebar {
+    max-width: 31.4rem;
+    margin: auto;
+    @media (max-width: 56.25em) {
+        margin: auto;
+        padding: 2rem;
+
+    }
+    
+    // General Button
+    button {
+            background: var(--main-color);
+            border: none;
+            border-radius: 5px;
+            color: var(--font-text-white);
+            font-family: var(--font-face);
+        }
+
+    /////////////////////////////////////
+    
+    .issue_slides {
+        
+        width: 100%;
+
+        &__text {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 3.3rem;
+
+
+        }
+
+        h3 {
+            color: var(--main-color);
+            font-weight: 600;
+            font-size: var(--font-p-text-4);
+            line-height: 123.69%;
+            margin: 0;
+        }
+
+        a {
+            font-size: 16px;
+        }
+    }
+    
+    .be_next, .subscriber, .support {
+        border: 1px solid #D8D8D8;
+        border-radius: 5px;
+        padding: 2rem 2.9rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .be_next {
+        h3 {
+            font-weight: 700;
+            font-size: var(--font-p-text-2);
+            line-height: 143.69%;
+            color: var(--main-color);
+            margin: 0;
+        }
+        
+        p {
+            font-size: var(--font-p-text-1);
+            line-height: 179.19%;
+            text-align: center;
+            color: var(--main-color);
+            width: 25.6rem;
+        }
+
+        button {
+            padding: 1.5rem 3rem;
+            text-transform: uppercase;
+        }
+    }
+
+    .subscriber {
+        margin-top: 1.6rem;
+        row-gap: 1.4rem;
+
+        h3 {
+            font-weight: 700;
+            font-size: var(--font-p-text-2);
+            line-height: 143.69%;
+            color: var(--main-color);
+            margin: 0;
+            width: 26.6rem;
+            text-align: center;
+        }
+
+        button {
+            padding: 1.5rem 2rem;
+            width: 100%;
+        }
+    }
+
+    .support {
+        margin-top: 1.6rem;
+        row-gap: 1.4rem;
+
+        h3 {
+            font-weight: 700;
+            font-size: var(--font-p-text-2);
+            line-height: 143.69%;
+            color: var(--main-color);
+            margin: 0;
+            width: 21.1rem;
+            text-align: center;
+        }
+
+        button {
+            padding: 1.5rem 3rem;
+        }
+    }
+}
+
+//SLIDER 
+.container {
+    width: 100%;
+    margin-bottom: 3rem;
+    .myswiper {
+        width: 100%;
+        .swiperslide {
+            text-align: center;
+            p {
+                font-size: var(--font-p-text-2);
+                font-weight: 500;
+                line-height: 20px;
+            }
+            -webkit-transform: translateZ(0);
+            .image_wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;                
+
+            }
+            .image_wrapper > span > img {
+                // padding: 4rem !important;
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: contain !important;
+
+                @media (max-width: 73.7em) {
+                    padding: 3rem !important;
+                }
+            }
+        }
+        .swiperNavNext,
+        .swiperNavPrev {
+            top: 50%;
+            position: absolute;
+            // transform: translateY(-50);
+            width: 50px;
+            height: 50px;
+            z-index: 1;
+            cursor: pointer;
+            background-repeat: no-repeat;
+            background-size: contain;
+ 
+            @media (max-width: 73.7em) {
+                    top: 35%;
+                }
+        }
+        
+        .swiperNavPrev {
+            left: 0;
+            background-image: url('/arrow-left.png');
+            background-size: auto;
+            background-position: left;
+            
+        }
+        
+        .swiperNavNext {
+            right: 0;
+            background-image: url('/arrow-right.png');
+            background-size: auto;
+            background-position: right;
+        }
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+        span {
+            background-color: var(--main-color);
+        }
+}

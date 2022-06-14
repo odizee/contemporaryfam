@@ -1,0 +1,131 @@
+.carousel {
+    background-image: url(../../assets/bg-carousel.png);
+    padding: 3rem 11rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    @media (max-width: 56.25em) {
+            padding: 3rem 3rem;
+        }
+    &__container {
+        background: var(--main-color);
+        // margin: 3rem 11rem;
+    }
+
+}
+
+.swiperslide {
+    display: flex;
+    padding: 4rem 20rem 8rem;
+    // justify-content: center;
+    align-items: center;
+    // padding: 4rem 26rem 8rem;
+    column-gap: 6rem;
+    
+    @media (max-width: 73.7em) {
+        row-gap: 3rem;
+        padding: 4rem 10rem 8rem;
+        flex-direction: column;
+        text-align: center;
+        }
+
+    .image_wrapper {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center;
+        width: 100%;
+    
+        @media (max-width: 73.7em) {
+            justify-content: center;
+        }
+
+        span > img{
+            width: 100% !important;
+        }
+    }
+
+    .text_wrapper {
+        width: 100%;
+        h3 {
+            font-weight: 600;
+            font-size: var(--font-p-text-2);
+            line-height: 183.92%;            
+            color: var(--secondary-color);
+            margin: 0;
+        }
+
+        p {
+            font-size: var(--font-p-text-1);
+            line-height: 32px;
+            color: var(--font-text-white);
+            width: 100%;
+
+        }
+
+        button {
+            background: #FFFFFF;
+            border: none;
+            padding: 1.5rem 3rem;
+            border-radius: 3px;
+            font-size: var(--font-p-text-1);
+            line-height: 21px;
+            color: var(--main-color);
+
+        }
+
+    }
+}
+
+    .myswiper {
+        .swiperNavNext,
+        .swiperNavPrev {
+            top: 50%;
+            position: absolute;
+            // transform: translateY(-50);
+            width: 50px;
+            height: 50px;
+            z-index: 1;
+            cursor: pointer;
+            background-repeat: no-repeat;
+            background-size: contain;
+            // background: white;
+ 
+            @media (max-width: 73.7em) {
+                top: 35%;
+                }
+            }
+            
+
+            .swiperNavPrev {
+                left: 5rem;
+                background-image: url('/carousel_l.png');
+                background-size: auto;
+                background-position: left;
+                
+                @media (max-width: 56em) {
+                    left: 1rem;
+                }
+            }
+
+            .swiperNavNext {
+                right: 5rem;
+                background-image: url('/carousel_r.png');
+                background-size: auto;
+                background-position: right;
+
+                @media (max-width: 56em) {
+                    right: 1rem;
+                }
+            }
+}
+
+.carousel_pagination {
+    display: flex;
+    justify-content: center;
+    // background-color: #FFFFFF;
+    position: relative;
+    padding: 2rem;
+        span {
+            background-color: var(--font-text-white);
+        }
+}

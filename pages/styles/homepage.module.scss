@@ -1,0 +1,249 @@
+.content_area_top {
+    max-width: var(--max-width);
+    margin: auto;
+    display: flex;
+    column-gap: 8.2rem;
+    margin-top: 3.8rem;
+
+    @media (max-width: 75em) {
+       padding: 0 3rem;
+      }
+}
+
+.main {
+
+    .main_top {
+        display: flex;
+        column-gap: 8.2rem;
+
+        @media (max-width: 73.7em) {
+            flex-direction: column;
+        }
+        
+        &__content {
+            @media (max-width: 73.7em) {
+            padding: 2rem;
+            }
+        }
+        &__preview {
+            h2 {
+                margin: 0;
+                font-weight: 600;
+                font-size: var(--font-p-text-3);
+                line-height: 123.69%;
+                color: var(--main-color);
+                padding-bottom: 2rem;
+            }
+        }
+        &__card {
+            display: flex;
+            column-gap: 1.9rem;
+            align-items: center;
+            justify-content: center;
+
+            background: #FFFFFF;
+            border: 1px solid #FFFFFF;
+            box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 8px;            
+            width: 100%;
+            
+            @media (max-width: 36em) {
+                flex-direction: column;
+                padding: 3rem;
+            }
+
+            .card_img > span {
+                width: 17.8rem !important;
+                height: 25.2rem!important;
+                border-radius: 8px 0px 0px 8px;
+                
+                @media (max-width: 36em) {
+                    border-radius: 0;
+                }
+            }
+
+            .card_content {
+                // padding: 1.8rem 0;
+                @media (max-width: 36em) {
+                    text-align: center;
+                }   
+                h3 {
+                    font-weight: 600;
+                    font-size: var( --font-p-text-4);
+                    color: var(--main-color);
+                    margin: 0;
+                    padding-bottom: 1.8rem;
+                    
+                    
+                }
+                
+                h4 {
+                    margin: 0;
+                    font-weight: 500;
+                    font-size: var(--font-p-text-2);
+                    color: #000000;
+                    padding-bottom: 1.4rem;
+                    
+                }
+                
+                ul {
+                    padding: 0;
+                    margin: 0;
+                    padding-bottom: 1.6rem;
+                    li {
+                        list-style-type: none;
+                        font-size: var(--font-p-text-1);
+                        line-height: 25px;
+                        color: #959494;
+                    }
+                }
+
+                a {
+                    font-weight: 500;
+                    font-size: var(--font-p-text-1);
+                    line-height: 123.69%;
+                    color: var(--secondary-color);
+                }
+            }
+        }
+
+        &__volume {
+            margin-top: 5.8rem;
+
+            h2 {
+                font-size: var(--font-p-text-4);
+                color: var(--main-color);
+                font-weight: 600;
+                line-height: 25px;
+                text-align: center;
+            }
+            .vol_issues {
+                display: flex;
+                column-gap: 2rem;
+                @media (max-width: 73.7em) {
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .vol_issue {
+                    h3 {
+                        font-size: var(--font-p-text-2);
+                        font-weight: 600;
+                        line-height: 20px;
+                        margin: 1rem 0;
+                        text-align: center;
+                        color: var(--main-color);
+                    }
+
+                    a {
+                        font-size: var(--font-p-text-1);
+                        font-weight: 500;
+                        color: var(--secondary-color);
+                        line-height: 17px;
+                        display: flex;
+                        justify-content: center;
+
+                    }
+
+                    .vol_img_wrap > span {
+                        width: 17.8rem !important;
+                        height: 25.9rem !important;
+                    }
+                }
+            }
+        }
+
+        &__philosophy {
+            background-image: url(../../assets/Groupphil.png);
+            // background-size: contain;
+            object-fit: contain;
+            background-position: left;
+            background-repeat: no-repeat;
+            // left: 0;
+            width: 100%;
+            margin-left: -10.5vw;
+            margin-top: 3rem;
+            padding-left: 21.7rem;
+            padding-bottom: 2rem;
+            padding-top: 2rem;
+            
+            @media (max-width: 30em) {
+                width: 100vw;
+            }
+            h2 {
+                font-size: var(--font-header-3);
+                font-weight: 500;
+                line-height: 31px;
+                color: var(--main-color);
+                z-index: 100;
+
+            }
+
+            p {
+                font-size: var(--font-p-text-1);
+                line-height: 157%;
+                color: #000000;
+                z-index: 100; 
+            }
+            
+        }
+
+    }
+    
+}
+
+.main_bottom {
+
+    .why_contemporary {
+        padding: 4.2rem 0;
+        background: rgba(248, 247, 247, 0.63);
+        h2 {
+            text-align: center;
+            font-weight: 500;
+            font-size: 2.5rem;
+            line-height: 38px;
+            color: var(--main-color);
+
+        }
+
+        hr {
+            width: 5.196rem;
+            border: 2px solid #D2AD43;
+            margin-bottom: 4rem;
+        }
+        .why_contemporary_items {
+            display: flex;
+            justify-content: center;
+            max-width: 1200px;
+            margin: auto;   
+            column-gap: 7.4rem  ;
+
+            @media (max-width: 73.7em) {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .why_contemporary_item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 34.7rem;
+                h3 {
+                    text-align: center;
+                    font-weight: 600;
+                    font-size: 1.8rem;
+                    line-height: 27px;
+                }
+
+                p {
+                    font-family: 'Segoe UI';
+                    font-size: var(--font-p-text-1);
+                    line-height: 150%;
+                    text-align: center;
+                }
+            }
+            
+        }
+    }
+}
