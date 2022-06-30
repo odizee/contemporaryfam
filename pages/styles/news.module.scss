@@ -1,0 +1,42 @@
+// .container {
+//     margin: auto;
+//     max-width: var(--max-width);
+// }
+
+.news {
+    font-family: "Roboto";
+    background: #F5F5F5;
+    padding-top: 4.3rem;
+    h1 {
+        font-size: clamp(2rem, 1rem + 10vh, 4rem);
+        font-weight: 500;
+        line-height: 47px;
+        margin-bottom: 1rem;
+    }
+     
+    p{
+        font-size: clamp(1rem, 1rem + 5vh, 1.8rem);
+        line-height: 28px;
+        letter-spacing: 0em;
+    }
+
+    .news_heading {
+        display: grid;
+        grid-template-columns: 49.7rem auto;
+        grid-column-gap: 9.9rem;
+
+        .image {
+            position: relative;
+        
+        }
+
+        .details {
+
+            .hr {
+                background: var(--main-color);
+                height: .3rem;
+                width: 6.944rem;
+            }
+        }
+    }
+}

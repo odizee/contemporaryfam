@@ -5,12 +5,8 @@
         padding-bottom: 3.5rem;
         
         @media (max-width: 74.5em) {
-           padding: 3rem 3rem;
+           padding: 3rem 0;
           }
-
-         @media (max-width: 56em) {
-          margin: 0 2rem;
-        }
 
         &_details {
             display: flex;

@@ -1,0 +1,25 @@
+.about {
+  &__hero {
+    background-image: url('../../assets/about_hero.png');
+    padding-top: 7.7rem;
+    padding-bottom: 7.1rem;
+    h1 {
+      font-weight: 700;
+      font-size: 4rem;
+      line-height: 53px;
+      color: var(--font-text-white);
+      text-transform: uppercase;
+    }
+
+    .br {
+      margin: 3rem;
+    }
+
+    p {
+      font-weight: 700;
+      font-size: var(--font-p-text-3);
+      line-height: 132%;
+      color: var(--font-text-white);
+    }
+  }
+}
