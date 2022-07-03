@@ -30,8 +30,6 @@
 
 html,
 body {
-  padding: 0;
-  margin: 0;
   font-family: Poppins, sans-serif;
   font-size: 62.5%;
   background-color: var(--main-bg-color);
@@ -81,6 +79,8 @@ button {
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 .swiper-pagination {

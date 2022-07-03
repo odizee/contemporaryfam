@@ -3,23 +3,130 @@
     background-image: url('../../assets/about_hero.png');
     padding-top: 7.7rem;
     padding-bottom: 7.1rem;
-    h1 {
-      font-weight: 700;
-      font-size: 4rem;
-      line-height: 53px;
-      color: var(--font-text-white);
-      text-transform: uppercase;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .hero_text {
+      h1 {
+        font-weight: 700;
+        font-size: 4rem;
+        line-height: 53px;
+        color: var(--font-text-white);
+        text-transform: uppercase;
+      }
+
+      .br {
+        margin: 3rem;
+      }
+
+      p {
+        max-width: 82rem;
+        font-weight: 700;
+        font-size: var(--font-p-text-3);
+        line-height: 132%;
+        color: var(--font-text-white);
+      }
+    }
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: auto 27.7rem;
+    margin-top: 6rem;
+    column-gap: 12rem;
+    padding-bottom: 3.5rem;
+
+    @media (max-width: 56.25em) {
+      grid-template-columns: 100%;
+      row-gap: 2rem;
     }
 
-    .br {
-      margin: 3rem;
+    h2 {
+      font-family: Poppins;
+      font-size: 3rem;
+      font-weight: 700;
+      margin: 0;
+      line-height: 45px;
+      color: var(--main-color);
     }
 
-    p {
+    .texts {
+      margin-bottom: 2rem;
+      p {
+        font-weight: 500;
+        font-size: var(--font-p-text-2);
+        line-height: 24px;
+        color: #000000;
+
+        &:first-child {
+          margin-bottom: 4rem;
+        }
+      }
+    }
+
+    h3 {
       font-weight: 700;
-      font-size: var(--font-p-text-3);
-      line-height: 132%;
-      color: var(--font-text-white);
+      font-size: var(--font-p-text-2);
+      line-height: 24px;
+      color: #000000;
+      margin-bottom: 2rem;
+      @media (max-width: 26.43em) {
+        text-align: center;
+      }
+    }
+
+    .edit_topics {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      column-gap: 9.4rem;
+      row-gap: 4rem;
+      margin: auto;
+
+      @media (max-width: 26.43em) {
+        width: 20rem;
+      }
+
+      .edit_topic {
+        position: relative;
+        p {
+          font-weight: 600;
+          font-size: 1.6rem;
+          line-height: 24px;
+          color: #000000;
+          text-align: center;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 7.5rem;
+          height: 2px;
+          right: 1.5rem;
+          background-color: var(--secondary-color);
+        }
+        .image {
+          width: 8rem;
+          height: 8rem;
+          margin: auto;
+          padding: 1.5rem;
+          background-color: var(--main-color);
+          border-radius: 90px;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    background: #f2f1f1;
+    padding-bottom: 3.8rem;
+    h2 {
+      text-align: center;
+      font-size: 3rem;
+      line-height: 45px;
+      padding-top: 5rem;
+      padding-bottom: 1rem;
+      color: var(--main-color);
     }
   }
 }
