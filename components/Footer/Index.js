@@ -3,11 +3,17 @@ import React from 'react';
 import styles from './Styles.module.scss';
 import logo from '../../assets/logo.png';
 import caret from '../../assets/caret.png';
+import youtube from '../../assets/youtube.png';
+import mail_footer from '../../assets/mail_footer.png';
+import phone from '../../assets/phone.png';
+import tel from '../../assets/tel.png';
+import twitter from '../../assets/twitter.png';
+import facebook from '../../assets/facebook.png';
 
 const Footer = () => {
   return (
-    <div className="container">
-      <footer className={styles.footer}>
+    <footer className={styles.footer}>
+      <div className="container">
         <div className={styles.footer__top}>
           <div className={styles.footer__logo}>
             <Image src={logo} />
@@ -75,14 +81,37 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className={styles.hr}></div>
-        <div className={styles.footer__bottom}>
-          <p>Enjoy unlimited access to all of our Issues and More !</p>
-          <div className={styles.divide}></div>
-          <a href="#">Subscribe Now</a>
+      </div>
+      {/* <div className={styles.hr}></div> */}
+      <div className={styles.footer__bottom}>
+        <div className={`container ${styles.footer__bottom_wrap}`}>
+          <div className={styles.copyrights}>
+            <p>Copyright © 2021 All Rights Reserved</p>
+          </div>
+          <div className={styles.connect}>
+            <p>Connect with Us</p>
+            <a href="#">
+              <Image src={phone} />
+            </a>
+            <a href="#">
+              <Image src={tel} />
+            </a>
+            <a href="#">
+              <Image src={mail_footer} />
+            </a>
+            <a href="#">
+              <Image src={youtube} />
+            </a>
+            <a href="#">
+              <Image src={twitter} />
+            </a>
+            <a href="#">
+              <Image src={facebook} />
+            </a>
+          </div>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
   );
 };
 

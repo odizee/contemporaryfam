@@ -5,13 +5,38 @@ import logo from '../../assets/logo.png';
 import caret from '../../assets/caret.png';
 import bars from '../../assets/bars-svgrepo-com.svg';
 import times from '../../assets/times-svgrepo-com.svg';
+import Dropdown from './Dropdown';
+import Link from 'next/link';
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
 
+  const [dropdown, setDropdown] = useState(false);
+  const [dropdown2, setDropdown2] = useState(false);
+
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
+
+  const onMouseEnter = (setdropdown) => {
+    if (window.innerWidth < 960) {
+      setdropdown(false);
+    } else {
+      setdropdown(true);
+    }
+  };
+
+  const onMouseLeave = (setdropdown) => {
+    if (window.innerWidth < 960) {
+      setdropdown(false);
+    } else {
+      setdropdown(false);
+    }
+  };
+
   return (
     <header className={styles.header}>
-      <div className="container">
+      <div className={`container ${styles.header_wrap}`}>
         <div className={styles.topnav}>
           <div className={styles.logo}>
             <Image src={logo} />
@@ -34,38 +59,70 @@ const Header = () => {
               <a href="about">About Us</a>
               <Image src={caret} />
             </li>
-            <li>
+            <li
+              onMouseEnter={() => onMouseEnter(setDropdown)}
+              onMouseLeave={() => onMouseLeave(setDropdown)}
+            >
               <a href="#">Magazine</a>
               <Image src={caret} />
-              <div className={styles.navigation__dropdown}>
-                <ul>
-                  <li>
-                    <a href="#">Magazine</a>
+              {dropdown && (
+                <ul
+                  onClick={handleClick}
+                  className={
+                    click
+                      ? `${styles.dropdown_menu} ${styles.clicked}`
+                      : `${styles.dropdown_menu}`
+                  }
+                >
+                  <li
+                    onClick={() => setClick(false)}
+                    className={styles.dropdown_link}
+                  >
+                    <Link href="#">Magazine</Link>{' '}
                   </li>
-                  <li>
-                    <a href="#">Magazine</a>
+                  <li
+                    onClick={() => setClick(false)}
+                    className={styles.dropdown_link}
+                  >
+                    <Link href="/">Magazine</Link>
                   </li>
-                  <li>
-                    <a href="#">Magazine</a>
-                  </li>
-                  <li>
-                    <a href="#">Magazine</a>
+                  <li
+                    onClick={() => setClick(false)}
+                    className={styles.dropdown_link}
+                  >
+                    <Link href="#">Magazine</Link>
                   </li>
                 </ul>
-              </div>
+              )}
             </li>
-            <li>
+            <li
+              onMouseEnter={() => onMouseEnter(setDropdown2)}
+              onMouseLeave={() => onMouseLeave(setDropdown2)}
+            >
               <a href="/news">News</a>
               <Image src={caret} />
-              <div className={styles.navigation__dropdown}>
-                <ul>
-                  <li>
-                    <a href="#">Events Calendar</a>
+              {dropdown2 && (
+                <ul
+                  onClick={handleClick}
+                  className={
+                    click
+                      ? `${styles.dropdown_menu} ${styles.clicked}`
+                      : `${styles.dropdown_menu}`
+                  }
+                >
+                  <li
+                    onClick={() => setClick(false)}
+                    className={styles.dropdown_link}
+                  >
+                    <Link href="#">Events Calendar</Link>{' '}
                   </li>
-                  <li>
-                    <a href="#">Podcasts and Resources</a>
+                  <li
+                    onClick={() => setClick(false)}
+                    className={styles.dropdown_link}
+                  >
+                    <Link href="/">Podcasts and Resources</Link>
                     <Image src={caret} />
-                    <div className={styles.navigation__dropdown}>
+                    {dropdown && (
                       <ul>
                         <li>
                           <a href="#">Global Podcasts & Resources</a>
@@ -74,16 +131,22 @@ const Header = () => {
                           <a href="#">Online Resources</a>
                         </li>
                       </ul>
-                    </div>
+                    )}
                   </li>
-                  <li>
-                    <a href="#">Submit News and Manuscripts</a>
+                  <li
+                    onClick={() => setClick(false)}
+                    className={styles.dropdown_link}
+                  >
+                    <Link href="#">Submit News and Manuscripts</Link>
                   </li>
-                  <li>
-                    <a href="#">Professional Services Directory</a>
+                  <li
+                    onClick={() => setClick(false)}
+                    className={styles.dropdown_link}
+                  >
+                    <Link href="#">Professional Services Directory</Link>
                   </li>
                 </ul>
-              </div>
+              )}
             </li>
             <li>
               <a href="#">Research</a>

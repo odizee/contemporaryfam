@@ -130,3 +130,38 @@
     }
   }
 }
+
+.ourteam {
+  &__hero {
+    background-image: url('../../assets/ourteam_hero.png');
+    min-height: 27.2rem;
+    display: flex;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &_text {
+      color: var(--font-text-white);
+      h1 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 4rem;
+        line-height: 53px;
+      }
+
+      p {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: var(--font-p-text-3);
+        line-height: 132%;
+      }
+    }
+  }
+
+  &__main {
+    padding-top: 12.9rem;
+    padding-bottom: 6.9rem;
+  }
+}

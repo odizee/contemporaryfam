@@ -1,7 +1,7 @@
 .footer {
+    padding-top: 4rem;
     &__top {
-        max-width: var(--max-width);
-        margin: auto;
+        padding-bottom: 4rem;
         padding-bottom: 3.5rem;
         
         @media (max-width: 74.5em) {
@@ -10,7 +10,7 @@
 
         &_details {
             display: flex;
-            column-gap: 10rem;
+            justify-content: space-between;
 
         @media (max-width: 73.7em) {
             flex-direction: column;
@@ -82,26 +82,35 @@
     }
     
     &__bottom {
-        max-width: var(--max-width);
-        margin: auto;
-        display: flex;
-        align-items: center;
-        column-gap: 2rem;
-        margin-top: 1rem;
+        padding: 1.5rem 0;
+        background-color: var(--main-color);
 
-        @media (max-width: 75em) {
-           padding: 0 3rem;
+
+        &_wrap {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Roboto';
+            font-size: var(--font-p-text-2);
+            line-height: 157%;
+            color: var(--font-text-white);
+
+            @media (max-width: 75em) {
+            flex-direction: column;
+            row-gap: 3rem;
           }
+
+            .connect {
+                display: flex;
+                align-items: center;
+                column-gap: 2.1rem;
+
+            }
+        }
 
         p {
             font-size: var(--font-p-text-2);
         }
 
-        .divide {
-            height: 3rem;
-            width: 1px;
-            background: #000;
-        }
 
         a {
             font-size: var(--font-p-text-2);
